@@ -1,0 +1,150 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Images section */
+.img-flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.img-flex img {
+    max-width: 352px;
+    width: 32%;
+    border-radius: 8px;
+}
+
+/* Plusy section */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+}
+
+.grid-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+/* Content sections */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem 0;
+    background: linear-gradient(42deg, #ABA8BF 0%, #F5E9F3 38.5%);
+    box-shadow: 0px 4px 33px 0px rgba(0, 0, 0, 0.15);
+}
+
+.section div {
+    padding: 2rem;
+}
+
+.section img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.position {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+.position p {
+    padding: 2rem;
+}
+.position-right {
+    position: relative;
+}
+.position-right img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    z-index: 2;
+    position: relative;
+}
+.background-layer {
+    display: none; 
+}
+
+/* Responsive design */
+@media (min-width: 650px) {
+    .img-flex {
+        flex-wrap: nowrap;
+    }
+    .img-flex img {
+        min-width: 150px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+    }
+
+    .section {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .section img {
+        width: 50%;
+    }
+    .position {
+        flex-direction: row;
+    }
+    .position p {
+        width: 30%;
+    }
+    .position-right {
+        width: 70%;
+    }
+    .background-layer {
+        display: block; 
+        width: 90%;
+        height: 80%;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: var(--Secondary-gradient, linear-gradient(42deg, #ABA8BF 0%, #F5E9F3 38.5%));
+        box-shadow: 0px 4px 33px 0px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        z-index: 1; 
+        right: 80px;
+        top: 100px;
+    }
+
+}
